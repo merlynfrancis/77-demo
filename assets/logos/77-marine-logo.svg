@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 520" role="img" aria-label="77 Marine — 7 Seas · 7 Emirates">
+  <g fill="currentColor">
+    <!-- Top tagline with flanking lines -->
+    <line x1="345" y1="78" x2="510" y2="78" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <line x1="890" y1="78" x2="1055" y2="78" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <text x="700" y="92"
+          font-family="'Plus Jakarta Sans', system-ui, sans-serif"
+          font-size="38" font-weight="500" letter-spacing="9"
+          text-anchor="middle">7 SEAS  ·  7 EMIRATES</text>
+
+    <!-- 77 italics -->
+    <text x="120" y="340"
+          font-family="'Fraunces', 'Times New Roman', serif"
+          font-style="italic" font-weight="700"
+          font-size="260" letter-spacing="-6">77</text>
+
+    <!-- Sail / flag accent -->
+    <path d="M520 140 Q548 250 530 340 L600 340 L660 140 Z"/>
+
+    <!-- Marine. wordmark -->
+    <text x="660" y="340"
+          font-family="'Fraunces', 'Times New Roman', serif"
+          font-style="italic" font-weight="700"
+          font-size="220" letter-spacing="-4">Marine.</text>
+
+    <!-- Wave underline -->
+    <path d="M90 432 C 260 372, 470 410, 700 412 C 920 414, 1100 388, 1310 392"
+          stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- Speedboat silhouette riding the wave -->
+    <path d="M840 410 L1075 388 L1085 408 L1075 416 L865 422 Z"/>
+    <path d="M870 386 L1062 376 L1075 388 L840 410 Z" opacity="0.75"/>
+  </g>
+</svg>

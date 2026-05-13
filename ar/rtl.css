@@ -1,0 +1,133 @@
+/* =========================================================================
+   77 MARINE — RTL ARABIC STYLE OVERRIDES
+   ------------------------------------------------------------------------
+   Applies to <html dir="rtl">. Loads after styles.css/responsive.css so
+   it can override directional properties cleanly. We use logical
+   properties where possible elsewhere so most layout flips for free.
+   ========================================================================= */
+
+[dir="rtl"] body {
+  font-family: "Plus Jakarta Sans", "IBM Plex Sans Arabic", "Noto Sans Arabic",
+    "Tajawal", system-ui, sans-serif;
+}
+
+/* Headlines and display copy use Fraunces in English; for Arabic we want
+   a strong, refined Arabic serif/sans pairing. */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .h-display,
+[dir="rtl"] .hero-headline,
+[dir="rtl"] .brand,
+[dir="rtl"] .seventyseven-mark-text {
+  font-family: "Fraunces", "Amiri", "Noto Naskh Arabic", "Tajawal", serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .hero-headline {
+  line-height: 1.18;
+}
+
+[dir="rtl"] .hero-headline em {
+  font-style: normal;
+}
+
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .mono,
+[dir="rtl"] .nav-links a,
+[dir="rtl"] .card .num,
+[dir="rtl"] .tag,
+[dir="rtl"] .stat .label,
+[dir="rtl"] .hero-meta .label {
+  letter-spacing: 0.05em;
+  font-family: "Plus Jakarta Sans", "Tajawal", "IBM Plex Sans Arabic", sans-serif;
+}
+
+/* Arrow icons inside buttons need to flip horizontally in RTL */
+[dir="rtl"] .btn .arrow,
+[dir="rtl"] .arrow {
+  transform: scaleX(-1);
+}
+
+/* Ribbon scroll direction reverses naturally — but the animation needs
+   to be flipped or the gradient masks need adjustment. Easier: flip the
+   animation direction. */
+[dir="rtl"] .ribbon-track {
+  animation-name: ribbonScrollRTL;
+}
+
+@keyframes ribbonScrollRTL {
+  from { transform: translateX(0); }
+  to   { transform: translateX(50%); }
+}
+
+/* Model card head flips: Arabic glyph aligns left, name on right */
+[dir="rtl"] .model-card__head {
+  flex-direction: row;
+}
+
+[dir="rtl"] .model-card__meaning {
+  border-left: 0;
+  border-right: 2px solid var(--accent);
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+/* Form field grid stays the same, but labels need RTL alignment */
+[dir="rtl"] label,
+[dir="rtl"] .field {
+  text-align: right;
+}
+
+/* Hero scroll indicator at the bottom should appear on the right in RTL */
+[dir="rtl"] .hero-scroll {
+  right: auto;
+  left: var(--gutter);
+}
+
+/* Gallery filter buttons stay horizontal */
+[dir="rtl"] .gallery-filter button {
+  letter-spacing: 0.05em;
+}
+
+[dir="rtl"] .masonry__tag {
+  letter-spacing: 0.05em;
+}
+
+[dir="rtl"] .footer-bar {
+  font-feature-settings: "tnum";
+}
+
+/* Numeric values stay LTR even in RTL context */
+[dir="rtl"] .stat .num,
+[dir="rtl"] .meta strong,
+[dir="rtl"] [data-year] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+/* The 7s in "7 SEAS · 7 EMIRATES" and "77 MARINE" should read LTR */
+[dir="rtl"] .footer-bar span:last-child {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Lang-switch base styles live in styles.css so they apply LTR + RTL.
+   Arabic just keeps the EN/AR labels readable in their Latin glyphs. */
+[dir="rtl"] .lang-switch a {
+  letter-spacing: 0.14em;
+  direction: ltr;
+}
+
+/* Mobile drawer for RTL: opens from the right */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] body.nav-open .mobile-drawer {
+  transform: translateX(0);
+}

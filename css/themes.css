@@ -1,0 +1,94 @@
+/* =========================================================================
+   77 MARINE — THEMES
+   ------------------------------------------------------------------------
+   Three themes, swapped via [data-theme="ocean|steel|gulf"] on <html>.
+   Each theme defines color tokens; everything else (layout/spacing/type)
+   stays constant. The 77 Marine logo SVG uses `currentColor`, so it
+   automatically inherits the theme `color` token.
+   ========================================================================= */
+
+/* ---------- 1. DEEP OCEAN (default) -------------------------------------- */
+:root,
+:root[data-theme="ocean"] {
+  --bg: #050a14;
+  --bg-deep: #03060e;
+  --bg-translucent: rgba(5, 10, 20, 0.78);
+  --surface: #0a1628;
+  --surface-elev: #122340;
+  --surface-translucent: rgba(10, 22, 40, 0.62);
+
+  --text: #eef3f8;
+  --text-muted: #93aac3;
+
+  --accent: #4a9eff;
+  --accent-hi: #6fb3ff;
+  --accent-on: #03060e;
+  --accent-glow: rgba(74, 158, 255, 0.20);
+
+  --accent-2: #6ad0e0;
+  --accent-2-glow: rgba(106, 208, 224, 0.12);
+
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.22);
+
+  /* For PNG client logos (ribbon) */
+  --logo-filter: brightness(0) invert(1);
+
+  color-scheme: dark;
+}
+
+/* ---------- 2. COASTAL STEEL --------------------------------------------- */
+:root[data-theme="steel"] {
+  --bg: #f4f6fa;
+  --bg-deep: #e9edf3;
+  --bg-translucent: rgba(244, 246, 250, 0.84);
+  --surface: #ffffff;
+  --surface-elev: #eef2f7;
+  --surface-translucent: rgba(255, 255, 255, 0.76);
+
+  --text: #0a1f3d;
+  --text-muted: #4a5a72;
+
+  --accent: #0a1f3d;
+  --accent-hi: #163a64;
+  --accent-on: #ffffff;
+  --accent-glow: rgba(10, 31, 61, 0.14);
+
+  --accent-2: #2d3e50;
+  --accent-2-glow: rgba(45, 62, 80, 0.08);
+
+  --border: rgba(10, 22, 40, 0.12);
+  --border-strong: rgba(10, 22, 40, 0.24);
+
+  --logo-filter: grayscale(100%) opacity(0.9);
+
+  color-scheme: light;
+}
+
+/* ---------- 3. ROYAL GULF ------------------------------------------------- */
+:root[data-theme="gulf"] {
+  --bg: #0a1a2e;
+  --bg-deep: #051022;
+  --bg-translucent: rgba(10, 26, 46, 0.78);
+  --surface: #112847;
+  --surface-elev: #1a3358;
+  --surface-translucent: rgba(17, 40, 71, 0.60);
+
+  --text: #f4ecd8;
+  --text-muted: #a8b6c8;
+
+  --accent: #d4ad53;
+  --accent-hi: #e6c474;
+  --accent-on: #0a1a2e;
+  --accent-glow: rgba(212, 173, 83, 0.22);
+
+  --accent-2: #4a90b8;
+  --accent-2-glow: rgba(74, 144, 184, 0.14);
+
+  --border: rgba(212, 173, 83, 0.18);
+  --border-strong: rgba(212, 173, 83, 0.34);
+
+  --logo-filter: brightness(0) invert(1) sepia(0.6) hue-rotate(330deg) saturate(0.55);
+
+  color-scheme: dark;
+}

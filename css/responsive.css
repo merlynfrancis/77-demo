@@ -1,0 +1,222 @@
+/* =========================================================================
+   77 MARINE — RESPONSIVE
+   ------------------------------------------------------------------------
+   Breakpoints (max-width):
+     1240px — small laptop
+     1024px — tablet landscape
+     900px  — tablet
+     680px  — mobile landscape
+     460px  — mobile small
+   ========================================================================= */
+
+/* Small laptop ------------------------------------------------------ */
+@media (max-width: 1240px) {
+  .hero-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--sp-7);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: var(--sp-6);
+  }
+
+  .seven-block .num-mega {
+    font-size: clamp(8rem, 16vw, 18rem);
+  }
+}
+
+/* Tablet landscape -------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+
+  .footer-grid .col-services {
+    display: none;
+  }
+}
+
+/* Tablet ------------------------------------------------------------ */
+@media (max-width: 900px) {
+
+  .hero {
+    padding-top: clamp(160px, 22vh, 220px);
+    padding-bottom: clamp(96px, 14vh, 144px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+
+  .hero-meta {
+    order: -1;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.75rem, 8vw, 4.75rem);
+  }
+
+  .split,
+  .split--feature {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .split-media img {
+    min-height: 380px;
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+    margin-bottom: var(--sp-7);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .seven-block {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    padding-block: var(--sp-7);
+  }
+
+  .seven-block .num-mega {
+    font-size: clamp(7rem, 22vw, 14rem);
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-step {
+    grid-template-columns: 72px 1fr;
+    gap: var(--sp-4);
+  }
+
+  .page-header {
+    padding-top: clamp(160px, 22vh, 220px);
+    padding-bottom: clamp(72px, 10vh, 120px);
+  }
+}
+
+/* Mobile ------------------------------------------------------------ */
+@media (max-width: 680px) {
+  :root {
+    --section-pad: clamp(64px, 12vw, 96px);
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .hero-canvas {
+    display: none;
+  }
+
+  /* Stack label / value vertically so long values never clip */
+  .hero-meta .meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hero-meta .value {
+    font-size: var(--fs-base);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .footer-bar {
+    font-size: 0.7rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .ribbon-track {
+    gap: 64px;
+    animation-duration: 40s;
+  }
+
+  .ribbon-logo {
+    height: clamp(92px, 22vw, 140px);
+    max-width: 260px;
+  }
+
+  .nav-actions .theme-switch {
+    display: none;
+  }
+
+  .cta-block {
+    padding: var(--sp-7) var(--sp-5);
+  }
+
+  .filter-bar {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .filter-bar button {
+    padding: 10px 16px;
+  }
+}
+
+/* Small mobile ------------------------------------------------------ */
+@media (max-width: 460px) {
+  .nav-actions .btn {
+    padding: 14px 22px;
+    font-size: var(--fs-xs);
+  }
+
+  .hero-meta {
+    padding: var(--sp-5);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Print -------------------------------------------------------------- */
+@media print {
+
+  .site-header,
+  .ribbon,
+  .hero-canvas,
+  .theme-switch,
+  .nav-toggle,
+  .mobile-drawer,
+  .mobile-overlay {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

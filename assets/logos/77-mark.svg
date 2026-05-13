@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="77 Marine mark">
+  <g fill="currentColor">
+    <!-- Two italic 7s with sail accent in the middle -->
+    <text x="20" y="300"
+          font-family="'Fraunces', 'Times New Roman', serif"
+          font-style="italic" font-weight="700"
+          font-size="320" letter-spacing="-10">77</text>
+
+    <!-- Sail / flag accent between digits -->
+    <path d="M340 90 Q368 200 350 300 L410 300 L470 90 Z"/>
+
+    <!-- Wave underline -->
+    <path d="M40 365 C 160 320, 320 350, 470 350 C 520 350, 555 342, 580 340"
+          stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- Boat silhouette -->
+    <path d="M280 345 L505 330 L515 350 L505 358 L300 360 Z"/>
+  </g>
+</svg>
